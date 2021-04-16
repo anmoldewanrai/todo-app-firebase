@@ -1,38 +1,111 @@
+:root {
+  --bg-color: #282c34;
+  --text-color: #fff;
+  --accent-color: #464d5c;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.heading {
+  font-size: 3em;
+}
+
 .App {
   text-align: center;
+  width: 70%;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todo-component {
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-form {
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-input {
+  text-align: center;
+  font-size: 2em;
+  width: 100%;
+  min-height: 3rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.icon-add {
+  margin-left: 8px;
+  width: 34px;
+  height: 34px;
+  filter: invert(100%) sepia(99%) saturate(0%) hue-rotate(201deg)
+    brightness(110%) contrast(100%);
+  padding: 8px;
+  border: 2px solid #000;
+  border-radius: 2px;
+}
+
+.submit-btn {
+  min-height: 100%;
+  margin-left: 2rem;
+}
+
+.todo-list {
+  padding: 0;
+}
+
+.todo-item,
+.no-todo,
+.loading {
+  background-color: var(--accent-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0px;
+  padding: 2rem;
+}
+
+.no-todo,
+.loading {
+  display: block;
+  background-color: transparent;
+}
+
+.todo-title,
+.no-todo,
+.loading {
+  margin: 0;
+  font-size: 2em;
+}
+
+.icons-div {
+  margin: 0;
+  padding: 0;
+}
+
+.icons {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.2s linear, transform 0.2s;
+  filter: invert(76%) sepia(1%) saturate(0%) hue-rotate(208deg) brightness(93%)
+    contrast(93%);
+  width: 20px;
+  height: 20px;
+  margin: 0 8px;
+  cursor: pointer;
+}
+
+.todo-item:hover .icons {
+  visibility: visible;
+  opacity: 1;
+}
+
+.icons:hover {
+  filter: invert(99%) sepia(99%) saturate(0%) hue-rotate(201deg)
+    brightness(103%) contrast(100%);
+  transform: scale(1.1); /* (150% zoom)*/
 }
