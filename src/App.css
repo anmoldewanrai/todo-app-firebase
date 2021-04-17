@@ -109,3 +109,10 @@ body {
     brightness(103%) contrast(100%);
   transform: scale(1.1); /* (150% zoom)*/
 }
+
+@media only screen and (max-width: 764px) {
+  .icons {
+    visibility: visible;
+    opacity: 1;
+  }
+}
