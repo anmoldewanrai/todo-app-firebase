@@ -16,7 +16,6 @@ export default function Todos() {
     collection.onSnapshot(snapshot =>{
       const fbData = [];
       snapshot.forEach(doc => {
-        console.log(doc.data());
         fbData.push(({...doc.data(), id: doc.id}))
       });
       setTodos(fbData); 
