@@ -7,5 +7,3 @@ Simple todo app built using [React](https://reactjs.org/docs/getting-started.htm
 https://todo-app-react-and-firebase.netlify.app/
 
 ## Screenshots
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
